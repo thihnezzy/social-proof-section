@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --white: #fff;
+    --primary-purple: #512051;
+    --primary-light-purple: #927B91;
+    --light-white: #f7f2f7;
+    --orange: #ef9546;
+    --header-font-size: 5.6rem;
+    --magenta: #EE69A4;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 110vh;
+    width: 100vw;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.7rem;
+}
+
+.background-pattern-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.background-pattern-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+.container{
+    margin: 120px 165px auto 165px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-section{
+    display: flex;
+    font-weight: 700;
+    color: var(--primary-purple);
+}
+
+.products-desc{
+    width: 445px;
+    font-size: 1.9rem;
+}
+
+.products-desc p{
+    color: var(--primary-light-purple);
+    font-weight: 500;
+}
+
+.rating-star{
+    position: relative;
+    display: flex;
+    margin-left: 100px;
+    width: 540px;
+}
+
+.rating-star__item{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 445px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--light-white);
+    font-size: 1.7rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.rating-star__item:nth-of-type(1){
+    left:0;
+}
+.rating-star__item:nth-of-type(2){
+    top:72px;
+    right: 47px;
+}
+.rating-star__item:nth-of-type(3){
+    top: 144px;
+    right:0;
+}
+
+
+h1.title{
+    font-size: var(--header-font-size);
+}
+
+.review-section{
+    position: relative;
+}
+
+.review-section__card{
+    position: absolute;
+    /*width:350px;
+    height: 234px;
+    */width: 30%;
+    /*height:50%;
+    */background-color: var(--primary-purple);
+    color: var(--white);
+    /*padding-top: 40px;
+    */border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.review-section__card:hover{
+    cursor: pointer;
+    transform: translateY(-0.7rem);
+    -webkit-transform: translateY(-0.7rem);
+    -moz-transform: translateY(-0.7rem);
+    -ms-transform: translateY(-0.7rem);
+    -o-transform: translateY(-0.7rem);
+}
+
+.review-section__card:nth-of-type(1){
+    top: 71px;
+}
+
+.review-section__card:nth-of-type(2){
+    top: 87px;
+    left: 380px;
+}
+
+.review-section__card:nth-of-type(3){
+    top: 103px;
+    left: 760px;
+}
+.review-section__card--control{
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.review-section__card--header{
+    display: flex;
+    margin-top: 40px;
+}
+.star-container{
+    margin-right: 2.5rem;
+}
+
+.card-header__control--avatar,img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 23px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card-header__control--name{
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.card-header__control--acc-type{
+    font-weight: 400;
+    color: var(--magenta);
+}
+
+.review-section__card--body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 32px; */
+    line-height: 22px;
+}
+
+
+@media only screen and (max-width: 420px) {
+    body{
+        height: auto;
+    }
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+    .header-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 327px;
+        text-align: center;
+    }
+    .header-section h1{
+        font-size: 4rem;
+    }
+    .products-desc{
+        width: 100%;
+        text-align: center;
+    }
+    .rating-star{
+        
+        justify-content: center;
+        align-items: center;
+        height:266px;
+        width: 327px;
+        margin: 39px 0 0 0;
+    }
+    .rating-star__item{
+        width: 100%;
+        top:0;
+        right: 0;
+        left: 0;
+    }
+    .review-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .star-container{
+        margin-right: 1rem;
+    }
+    .review-section__card{
+        position: initial;
+        margin-top: 16px;
+        width: 70%;
+    }
+}
